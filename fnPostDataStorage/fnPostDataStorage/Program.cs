@@ -11,7 +11,7 @@ var host = new HostBuilder()
         services.ConfigureFunctionsApplicationInsights();
         services.Configure<KestrelServerOptions>(options =>
         {
-            options.Limits.MaxRequestBufferSize = 1024 * 1024 * 10;
+            options.Limits.MaxRequestBodySize = 1024 * 1024 * 10;
         });
     })
     .Build();
